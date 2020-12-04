@@ -3,13 +3,13 @@ class AuthorsController < ApplicationController
     def show
         author = Author.find_by(params[:id])
 
-        render json: author, include: :notes, except: [:created_at, :updated_at]
+        render json: author
     end 
 
     def index 
         authors = Author.all 
 
-        render json: authors, include: :notes, except: [:created_at, :updated_at]
+        render json: authors
     end 
 
     def create 

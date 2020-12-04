@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
 
     def show
-        note = Note.find_by(params[:id])
+        note = Note.find(params[:id])
 
         render json: note
     end 
