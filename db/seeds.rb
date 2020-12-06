@@ -18,3 +18,4 @@ Author.create(username: "Joshua")
 Note.create(title: "First Note", content: "This is the content of the first note", author_id: Author.first.id)
 Note.create(title: "Another Note", content: "Still I rise", author_id: Author.first.id)
 Note.create(title: "My story", content: "I would like to share my story", author_id: Author.third.id)
+

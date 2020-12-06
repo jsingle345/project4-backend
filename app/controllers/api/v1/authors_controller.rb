@@ -1,4 +1,4 @@
-class AuthorsController < ApplicationController
+class Api::V1::AuthorsController < ApplicationController
 
     def show
         author = Author.find_by(params[:id])
