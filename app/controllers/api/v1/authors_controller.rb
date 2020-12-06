@@ -13,9 +13,12 @@ class Api::V1::AuthorsController < ApplicationController
     end 
 
     def create 
-        author = Author.create(author_params)
+        author = Author.new(author_params)
+        if author.save 
+             render json: author
+        else render json: { error: "Uh Oh, looks like someone has that name already, Let's try to be original!"}, status: 401
+        end
         
-        render json: author
     end
 
     def update 
